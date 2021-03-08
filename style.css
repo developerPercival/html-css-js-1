@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  transition: 240ms ease-in-out;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 900;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+/* navbar */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.4rem 1.8rem;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* change by scroll animation */
+.nav--change {
+  background-color: white;
+  color: black;
+}
+
+.nav--default {
+  background-color: black;
+  color: white;
+}
+
+.test {
+  color: gray;
+}
+
+header > .logo {
+  padding-left: 3rem;
+}
+
+.nav--container > .nav--list {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1.4rem;
+  padding-right: 3rem;
+}
+
+.nav--container > .nav--list > li {
+  margin: 0 1rem;
+}
+
+.nav--container > .nav--list > li > a {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* hero section */
+.main--content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  /* glass */
+  padding: 4rem;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255);
+  border-radius: 9px;
+}
+
+.main--content > .main--info > h1 {
+  font-size: 2rem;
+  color: #314e52;
+}
+
+/* card animation */
+.bg--default {
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.boxes--content {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+
+  transform: translateX(400%);
+}
+
+.boxes--content:nth-child(even) {
+  transform: translateX(-400%);
+}
+
+/* Animation */
+
+.show {
+  transform: translateX(0);
+}
+
+.boxes--content > .box {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 6rem;
+  border-radius: 10px;
+  background: #9d0191;
+}
+
+.boxes--content > .box > h3 {
+  color: white;
+  font-size: 1.4rem;
+}
+
+/* lazy loading */
+
+.lazy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lazy--loading {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.lazy--loading > .box--glass {
+  padding: 6rem;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255);
+  border-radius: 9px;
+}
+
+.lazy--loading > .box--glass > h3 {
+  color: #fd3a69;
+  font-size: 1.4rem;
+}
+
+/* background picture */
+
+.bg--picture {
+  background: url(./img/sunset-1373171_1920.jpg);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.bg--picture:nth-child(2) {
+  background: url(./img/forest-931706_1920.jpg);
+}
+
+/* helper styless */
+.text-center {
+  text-align: center;
+}
+
+.margin-top {
+  margin-top: 0.1px;
+}
+
+.container {
+  width: 89.99%;
+  margin: 0 auto;
+}
+
+/* scroll animation */
